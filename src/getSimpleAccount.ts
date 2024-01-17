@@ -18,6 +18,14 @@ export function getSimpleAccount(
     paymasterAPI,
   });
 
+  console.log(
+    JsonRpcProvider,
+    signingKey,
+    entryPointAddress,
+    factoryAddress,
+    paymasterAPI,
+    "getSimpleAccount"
+  );
   // Hack: default getUserOpReceipt does not include fromBlock which causes an error for some RPC providers.
   sw.getUserOpReceipt = async (
     userOpHash: string,
